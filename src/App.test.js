@@ -60,6 +60,8 @@ describe('App full rendering tests', () => {
   let app;
 
   beforeEach(async () => {
+    // Make data look sample data (instead of seed.json)
+    data.splice(0, data.length, ...sampleArticles);
     app = mount(<App />);
   });
 
